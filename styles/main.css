@@ -1,0 +1,87 @@
+body {
+    background-color: #ecf0f1;
+}
+
+.jumbotron {
+    background-color: white;
+}
+
+.list {
+    margin-top: 2em;
+}
+
+.vid, .categories {
+    margin-bottom: 1em;
+}
+
+.title-info, .actions {
+    background-color: white;
+}
+
+.title-info {
+	display: flex;
+    align-items: center;
+    border-bottom: solid 3px whitesmoke;
+    padding: 1em;
+}
+
+.title-info h4 {
+    margin: 0;
+}
+
+.thumbnail {
+	min-width: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    margin: 0 20px 0 0;
+    background-color: cadetblue;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.actions {
+    border-top: solid 3px whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.actions .meta {
+    padding: .8em 1em;
+}
+
+.actions .meta * {
+    display: inline;
+}
+
+.score {
+    padding: .5em .7em;
+    background-color: whitesmoke;
+    border-radius: 12px;
+    margin-right: 20px;
+}
+
+.flair {
+    margin-right: 20px;
+}
+
+.actions .open {
+    padding: .8em 1em;
+    font-size: 1.5em;
+    line-height: 0;
+    display: inline-block;
+    background-color: lightblue;
+}
+
+/* Display Video Animation */
+
+.vid-embed.ng-hide-add, .vid-embed.ng-hide-remove {
+    transition: all 0s ease;
+    -webkit-transition: all 0s ease;
+}
+
+.vid-embed {
+    transition: all .3s ease;
+    -webkit-transition: all 0s ease;
+}

@@ -1,0 +1,30 @@
+<div class='list'>
+
+    <div class='categories'>
+        <a href=''> + Add a New Task</a>
+    </div>
+
+    <div class='vid'
+         ng-repeat="vid in vids">
+
+        <div class='title-info'>
+            <div class='thumbnail' style="background-image: url({{vid.data.preview.images[0].source.url}})"></div>
+            <h4>{{vid.data.title}}</h4>
+        </div>
+
+        <div ng-show="showVideo" class='vid-embed embed-responsive embed-responsive-16by9'>
+            {{embedHTML}}
+        </div>
+
+        <div class='actions'>
+            <div class='meta'>
+                <p class='score'>{{vid.data.score}}</p>
+                <p class='flair'>{{vid.data.link_flair_text}}</p>
+                <a href='{{vid.data.url}}' target='_blank'>View Source</a>
+            </div>
+            <a href="" ng-click='showVideo = !showVideo' class='open'><i class='fa fa-play'></i></a>
+        </div>
+
+    </div>
+
+</div>
