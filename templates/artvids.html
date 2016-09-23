@@ -5,15 +5,22 @@
     </div>
 
     <div class='vid'
-         ng-repeat="vid in vids">
+         ng-repeat="vid in vids"
+         ng-if="vid.data.link_flair_text != 'Meta'">
 
         <div class='title-info'>
             <div class='thumbnail' style="background-image: url({{vid.data.preview.images[0].source.url}})"></div>
             <h4>{{vid.data.title}}</h4>
         </div>
 
-        <div ng-show="showVideo" class='vid-embed embed-responsive embed-responsive-16by9'>
-            {{embedHTML}}
+        <div ng-show="showVideo" class='vid-embed embed-responsive embed-responsive-16by9'
+             ng-if="vid.data.domain == 'youtube.com' || vid.data.domain == 'youtu.be'">
+            <youtube-video video-url="vid.data.url"></youtube-video>
+        </div>
+
+        <div ng-show="showVideo" class='vid-embed embed-responsive embed-responsive-16by9'
+             ng-if="vid.data.domain == 'vimeo.com'">
+            <h3>Vimeo API Coming Soon</h3>
         </div>
 
         <div class='actions'>
@@ -22,7 +29,7 @@
                 <p class='flair'>{{vid.data.link_flair_text}}</p>
                 <a href='{{vid.data.url}}' target='_blank'>View Source</a>
             </div>
-            <a href="" ng-click='showVideo = !showVideo' class='open'><i class='fa fa-play'></i></a>
+            <a href="" ng-click="showVideo = !showVideo" class='open'><i class='fa fa-play'></i></a>
         </div>
 
     </div>

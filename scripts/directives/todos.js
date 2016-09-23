@@ -1,4 +1,4 @@
-angular.module('todoListApp')
+angular.module('artVidApp')
 .directive('artvids', function() {
     return{
         templateUrl: 'templates/artvids.html',

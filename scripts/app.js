@@ -1,1 +1,1 @@
-angular.module('todoListApp', []);
+angular.module('artVidApp', ['youtube-embed']);
